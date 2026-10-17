@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>波哥仓库</title>
+  <style>
+    body {
+      max-width: 680px;
+      margin: 60px auto;
+      padding: 0 20px;
+      font-family: sans-serif;
+      line-height: 1.8;
+      color: #222;
+      background: #f5f7fa;
+    }
+    main {
+      padding: 28px;
+      background: white;
+      border-radius: 12px;
+    }
+    a { color: #1769d2; }
+    code { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>TVBox 配置中心</h1>
+    <p>个人维护的影视接口配置文件。</p>
+    <h2>配置文件</h2>
+    <p><a href="/tvbox.json">打开 tvbox.json</a></p>
+    <p>电视端配置地址：</p>
+    <p><code>https://tvbox.13141520.xyz/tvbox.json</code></p>
+    <button onclick="navigator.clipboard.writeText('https://tvbox.13141520.xyz/tvbox.json').then(()=>alert('已复制配置地址'))">
+      复制配置地址
+    </button>
+  </main>
+</body>
+</html>
