@@ -337,20 +337,18 @@
       ]
     }
   ],
-  "lives": [
+ "lives": [
     {
       "name": "IPTV-Org 中国全频道",
       "type": 0,
       "url": "https://fastly.jsdelivr.net/gh/iptv-org/iptv@master/countries/cn.m3u",
-      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://epg.112114.xyz/logo/{name}.png"
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}"
     },
     {
-      "name": "范明明 IPv6 央视卫视高清 (推荐备用)",
+      "name": "范明明 IPv6 高清",
       "type": 0,
       "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-      "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://epg.112114.xyz/logo/{name}.png"
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}"
     }
   ],
   "parses": [],
