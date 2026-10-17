@@ -1,0 +1,16 @@
+{
+  "lives": [
+    {
+      "name": "IPTV-Org 中国全频道",
+      "type": 0,
+      "url": "https://fastly.jsdelivr.net/gh/iptv-org/iptv@master/countries/cn.m3u",
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}"
+    },
+    {
+      "name": "范明明 IPv6 高清直播源",
+      "type": 0,
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "epg": "https://epg.112114.xyz/?ch={name}&date={date}"
+    }
+  ]
+}
