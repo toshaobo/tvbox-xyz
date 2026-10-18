@@ -4,7 +4,7 @@
 TVBox CCTV 直播源自动维护脚本
 
 流程：抓取上游 m3u 源 -> 过滤央视频道 -> 并发验活测速 ->
-      每个频道保留最优 N 条 -> 输出 docs/cctv.m3u 和 docs/tvbox.json
+      每个频道保留最优 N 条 -> 输出 docs/cctv.m3u 和 docs/live.json
 
 用法：
     python fetch.py --domain live.example.top            # 生成文件
@@ -213,7 +213,7 @@ def main():
             }
         ]
     }
-    json_path = os.path.join(OUTPUT_DIR, "tvbox.json")
+    json_path = os.path.join(OUTPUT_DIR, "live.json")
     with open(json_path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(tvbox, f, ensure_ascii=False, indent=2)
 
@@ -222,7 +222,7 @@ def main():
         f.write(
             "<!doctype html><meta charset=utf-8><title>TVBox Live</title>"
             "<h3>自建 CCTV 直播源</h3><ul>"
-            "<li>TVBox 配置地址: <code>/tvbox.json</code></li>"
+            "<li>TVBox 配置地址: <code>/live.json</code></li>"
             "<li>m3u 直播源: <code>/cctv.m3u</code></li>"
             f"</ul><p>最近更新: {time.strftime('%Y-%m-%d %H:%M:%S')}</p>"
         )
