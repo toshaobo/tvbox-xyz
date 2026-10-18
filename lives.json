@@ -1,16 +1,14 @@
 {
   "lives": [
     {
-      "name": "IPTV-Org 中国全频道",
+      "name": "国内频道·CN",
       "type": 0,
-      "url": "https://fastly.jsdelivr.net/gh/iptv-org/iptv@master/countries/cn.m3u",
-      "epg": "https://epg.112114.xyz/?ch={name}&date={date}"
+      "url": "https://tvbox.13141520.xyz/tv/cn.m3u"
     },
     {
-      "name": "范明明 IPv6 高清直播源",
+      "name": "范明明IPv6",
       "type": 0,
-      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-      "epg": "https://epg.112114.xyz/?ch={name}&date={date}"
+      "url": "https://tvbox.13141520.xyz/tv/ipv6.m3u"
     }
   ]
 }
