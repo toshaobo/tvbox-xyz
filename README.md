@@ -23,7 +23,7 @@ TVBox 配置地址：https://你的域名/tvbox.json   ← 只填这一次
 1. 新建一个公开仓库（如 `tvbox-live`），把本目录全部文件 push 上去。
 2. 仓库 **Settings → Pages**：Source 选 `Deploy from a branch`，
    分支选 `main`、目录选 `/docs`，保存。
-3. 同一页面 **Custom domain** 填 `live.xiaoxiaowang.online`（用子域名，省去根域名的麻烦），
+3. 同一页面 **Custom domain** 填 `tvbox.13141520.xyz`（用子域名，省去根域名的麻烦），
    保存并勾选 **Enforce HTTPS**。
 
 ## 三、域名解析
@@ -34,7 +34,7 @@ TVBox 配置地址：https://你的域名/tvbox.json   ← 只填这一次
 |------|---------|--------|
 | CNAME | `live` | `你的GitHub用户名.github.io` |
 
-等几分钟，`https://live.xiaoxiaowang.online/index.html` 能打开就说明发布成功。
+等几分钟，`https://tvbox.13141520.xyz/index.html` 能打开就说明发布成功。
 
 ## 四、NAS 定时维护（核心）
 
@@ -44,13 +44,13 @@ NAS 上装好 `git` 和 `python3`（群晖/威联通可用自带套件或 Docker
 git clone https://github.com/你的用户名/tvbox-live.git
 cd tvbox-live
 # 先配好 git 推送权限（建议用 Personal Access Token 或 SSH key）
-python3 fetch.py --domain live.xiaoxiaowang.online --push   # 手动跑一次验证
+python3 fetch.py --domain tvbox.13141520.xyz --push   # 手动跑一次验证
 ```
 
 加定时任务（crontab 或群晖「任务计划」），每 6 小时一次：
 
 ```cron
-23 */6 * * *  cd /volume1/tvbox-live && python3 fetch.py --domain live.xiaoxiaowang.online --push >> fetch.log 2>&1
+23 */6 * * *  cd /volume1/tvbox-xyz && python3 fetch.py --domain tvbox.13141520.xyz --push >> fetch.log 2>&1
 ```
 
 ## 五、TVBox 端配置（只做这一次）
@@ -58,7 +58,7 @@ python3 fetch.py --domain live.xiaoxiaowang.online --push   # 手动跑一次验
 TVBox → 设置 → 配置地址，填入：
 
 ```
-https://live.xiaoxiaowang.online/tvbox.json
+https://tvbox.13141520.xyq/tvbox.json
 ```
 
 以后源失效由脚本自动替换，客户端永远不用动。
@@ -67,7 +67,7 @@ https://live.xiaoxiaowang.online/tvbox.json
 
 `.github/workflows/update.yml` 已内置：GitHub 每 6 小时也在云端跑一遍同一脚本，
 NAS 关机/故障时源照常在更新。启用方法：仓库 **Settings → Secrets and variables →
-Actions → Variables** 添加 `TVBOX_DOMAIN = live.xiaoxiaowang.online`。
+Actions → Variables** 添加 `TVBOX_DOMAIN = tvbox.13141520.xyz`。
 不需要云端跑就直接删掉 `.github/workflows/update.yml`。
 
 ## 常见问题
