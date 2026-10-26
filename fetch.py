@@ -221,7 +221,7 @@ def main():
     with open(os.path.join(OUTPUT_DIR, "index.html"), "w", encoding="utf-8", newline="\n") as f:
         f.write(
             "<!doctype html><meta charset=utf-8><title>TVBox Live</title>"
-            "<h3>波哥自建 CCTV 直播源</h3><ul>"
+            "<h3>自建 CCTV 直播源</h3><ul>"
             "<li>TVBox 配置地址: <code>https://tvbox.13141520.xyz/live.json</code></li>"
             "<li>m3u 直播源: <code>https://tvbox.13141520.xyz/cctv.m3u</code></li>"
             f"</ul><p>最近更新: {time.strftime('%Y-%m-%d %H:%M:%S')}</p>"
