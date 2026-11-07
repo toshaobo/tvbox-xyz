@@ -222,8 +222,8 @@ def main():
         f.write(
             "<!doctype html><meta charset=utf-8><title>TVBox Live</title>"
             "<h3>自建 CCTV 直播源</h3><ul>"
-            "<li>TVBox 配置地址: <code>https://tvbox.13141520.xyz/live.json</code></li>"
-            "<li>m3u 直播源: <code>https://tvbox.13141520.xyz/cctv.m3u</code></li>"
+            "<li>直播配置地址: <code>https://tvbox.13141520.xyz/live.json</code></li>"
+            "<li>点播配置地址: <code>https://tvbox.13141520.xyz/tvbox.json</code></li>"
             f"</ul><p>最近更新: {time.strftime('%Y-%m-%d %H:%M:%S')}</p>"
         )
 
